@@ -44,6 +44,7 @@
               <h4 class="card-title">Basic Actions</h4>
               <button class="btn btn-primary btn-lg btn-block mb-3" id="connectButton" disabled></button>
               <button class="btn btn-primary btn-lg btn-block mb-3" id="getAccounts">eth_accounts</button>
+              <button class="btn btn-primary btn-lg btn-block mb-3" id="getnfts">get assets</button>
               <p class="info-text alert alert-secondary">eth_accounts result: <span id="getAccountsResult"></span></p>
             </div>
           </div>
@@ -53,8 +54,10 @@
     <!-- /Part 1 -->
 
     <section>
+
+      <p id=></p>
       <!-- Part 2 Contract-->
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
           <div class="card full-width">
             <div class="card-body">
@@ -65,10 +68,10 @@
               <p class="info-text alert alert-secondary">Contract Status: <span id="contractStatus">Not clicked</span></p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- /Part 2 -->
 
-        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
+        <!-- <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
           <div class="card full-width">
             <div class="card-body">
               <h4 class="card-title">Send Eth</h4>
@@ -80,9 +83,9 @@
               <p class="info-text alert alert-warning">Sign Typed Data Result: <span id="signTypedDataResult"></span></p>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
+        <!-- <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch">
           <div class="card full-width">
             <div class="card-body">
               <h4 class="card-title">Send Tokens</h4>
@@ -98,12 +101,12 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </div> -->
+    </section> 
   </main>
 
   <script src="node_modules/@metamask/onboarding/dist/metamask-onboarding.bundle.js" defer></script>
-  <script src="contract.js" defer></script>
+  <script type="module" src="contract.js" defer></script>
 </body>
 
 </html>
