@@ -29,14 +29,13 @@ The `piggybankContract` is compiled from:
       }
   }
 */
-const sdk = require("api")("@opensea/v1.0#19a5bbq7kww6d5ob");
+
 const forwarderOrigin = "http://localhost:9010";
 
 const initialize = () => {
   const onboardButton = document.getElementById("connectButton");
   const getAccountsButton = document.getElementById("getAccounts");
   const getAccountsResult = document.getElementById("getAccountsResult");
-  const nftBtn = document.getElementById("getnfts");
 
   const isMetaMaskInstalled = () => {
     //Have to check the ethereum binding on the window object to see if it's installed
@@ -91,18 +90,6 @@ const initialize = () => {
     //We take the first address in the array of addresses and display it
     getAccountsResult.innerHTML = accounts[0] || "Not able to get accounts";
     console.log(accounts[0]);
-  });
-
-  nftBtn.addEventListener("click", async () => {
-    //https://api.opensea.io/api/v1/assets?owner=${address}
-
-    await sdk["getting-assets"]({
-      order_direction: "desc",
-      offset: "0",
-      limit: "20",
-    })
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err));
   });
 };
 window.addEventListener("DOMContentLoaded", initialize);
